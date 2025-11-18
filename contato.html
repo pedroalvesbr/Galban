@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Galban">
+    <title>Contato - Galban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Galban</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="atuacao.html">Atuação</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Entre em Contato</h1>
+            <p>Estamos prontos para discutir seu próximo projeto</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h2>Envie uma Mensagem</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Serviço de Interesse</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Selecione um serviço...</option>
+                                    <option value="fabricacao">Fabricação</option>
+                                    <option value="soldagem">Soldagem</option>
+                                    <option value="corte">Corte</option>
+                                    <option value="protecao">Proteção Superficial</option>
+                                    <option value="montagem">Montagem</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-button">Enviar Mensagem</button>
+                        </form>
+                        <div id="formMessage" class="form-message" style="display:none;"></div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h2>Informações de Contato</h2>
+                        
+                        <div class="info-item">
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+551130000000">(11) 3000-0000</a></p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contato@Galban.com.br">contato@Galban.com.br</a></p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Endereço</h4>
+                            <p>São Paulo, SP<br>Brasil</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 8h - 18h<br>Sábado: 8h - 13h</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Redes Sociais</h4>
+                            <div class="social-links">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Facebook</a>
+                                <a href="#" class="social-link">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>Galban</h4>
+                <p>Caldeiraria Industrial e Estruturas Metálicas</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="clientes.html">Clientes</a></li>
+                    <li><a href="atuacao.html">Atuação</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@Galban.com.br</p>
+                <p>Tel: (11) 3000-0000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Galban. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
