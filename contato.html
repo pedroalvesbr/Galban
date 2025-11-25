@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entre em contato com a Galban">
     <title>Contato - Galban</title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="logo">
-                    <h1>Galban</h1>
+                    <h1>GALBAN</h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
@@ -39,71 +42,34 @@
             <div class="container">
                 <div class="contact-wrapper">
                     <!-- Contact Form -->
-                    <div class="contact-form">
-                        <h2>Envie uma Mensagem</h2>
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Nome Completo</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Telefone</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="company">Empresa</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="service">Serviço de Interesse</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Selecione um serviço...</option>
-                                    <option value="fabricacao">Fabricação</option>
-                                    <option value="soldagem">Soldagem</option>
-                                    <option value="corte">Corte</option>
-                                    <option value="protecao">Proteção Superficial</option>
-                                    <option value="montagem">Montagem</option>
-                                    <option value="outros">Outros</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Mensagem</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-
-                            <button type="submit" class="submit-button">Enviar Mensagem</button>
-                        </form>
-                        <div id="formMessage" class="form-message" style="display:none;"></div>
-                    </div>
-
-                    <!-- Contact Info -->
                     <div class="contact-info">
-                        <h2>Informações de Contato</h2>
-                        
+                        <form id="contactForm">
                         <div class="info-item">
                             <h4>Telefone</h4>
-                            <p><a href="tel:+551130000000">(11) 3000-0000</a></p>
+                            <p><a class="bi bi-telephone" href="tel:+551239535333 "> (12) 3953-5333 </a></p>
+                            <p><a class="bi bi-telephone" href="tel:+551239527377 "> (12) 3952-7377 </a></p>
+        
                         </div>
+                        <br>
 
                         <div class="info-item">
                             <h4>Email</h4>
                             <p><a href="mailto:contato@Galban.com.br">contato@Galban.com.br</a></p>
                         </div>
+                        <br>
 
                         <div class="info-item">
                             <h4>Endereço</h4>
-                            <p>São Paulo, SP<br>Brasil</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.0629927721297!2d-45.94991622376695!3d-23.313473152533593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdcbaeadf03d45%3A0x4ab1b09147918d4c!2sAv.%20Jos%C3%A9%20Teodoro%20de%20Siqueira%2C%20855%20-%20Jardim%20Maria%20Amelia%2C%20Jacare%C3%AD%20-%20SP%2C%2012318-001!5e0!3m2!1spt-BR!2sbr!4v1764031617260!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
+                        <br>
 
+                
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        
                         <div class="info-item">
                             <h4>Horário de Funcionamento</h4>
                             <p>Segunda a Sexta: 8h - 18h<br>Sábado: 8h - 13h</p>
@@ -122,12 +88,15 @@
             </div>
         </section>
     </main>
+        <a id="botao_wpp" href="https://wa.me/5512996045665" target="_blank" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-section">
-                <h4>Galban</h4>
+                <h4>GALBAN</h4>
                 <p>Caldeiraria Industrial e Estruturas Metálicas</p>
             </div>
             <div class="footer-section">
@@ -142,7 +111,8 @@
             <div class="footer-section">
                 <h4>Contato</h4>
                 <p>Email: contato@Galban.com.br</p>
-                <p>Tel: (11) 3000-0000</p>
+                <p>Tel: (12)3953-5333</p>
+                <p>Tel: (12)3952-7377</p>
             </div>
         </div>
         <div class="footer-bottom">

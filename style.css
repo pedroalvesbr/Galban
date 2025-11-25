@@ -413,6 +413,75 @@ img {
     line-height: var(--line-height-relaxed);
 }
 
+/*====WHATSAPP====*/
+
+/* <CHANGE> WhatsApp button styling with improved white icon visibility */
+#botao_wpp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #25d366;
+  color: #ffffff !important;
+  font-size: 28px;
+  font-weight: bold;
+
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 1000;
+
+  /* Garante que o branco seja exibido corretamente */
+  fill: #ffffff;
+  stroke: #ffffff;
+}
+
+
+/* Efeito hover moderno */
+#botao_wpp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+}
+
+/* Opcional: tooltip de texto ao lado (boa UX em desktop) */
+#botao_wpp::after {
+  content: "Entre em contato";
+  position: absolute;
+  right: 70px;
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+#botao_wpp:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade — esconde o texto em telas pequenas */
+@media (max-width: 768px) {
+  #botao_wpp::after {
+    display: none;
+  }
+}
+
+
 /* ===== REASONS GRID ===== */
 .reasons-grid {
     display: grid;
