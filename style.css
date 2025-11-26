@@ -157,6 +157,8 @@ img {
     border-bottom-color: var(--color-orange);
 }
 
+
+
 /* ===== HERO SECTION ===== */
 .hero {
     background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(42, 42, 42, 0.8)),

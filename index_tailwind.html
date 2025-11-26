@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="galban - Caldeiraria Industrial, Soldagem e Estruturas Metálicas">
+    <title>GALBAN - Caldeiraria Industrial</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'industrial': {
+                'ebony': '#0b151e',
+                'dark-gray': '#1a1f27',
+                'mid-gray': '#3d4a58',
+                'light-gray': '#5a6b78',
+                'accent-gray': '#7f8a93',
+                'off-white': '#c2c2c4',
+                'cream': '#f5f5f3',
+                'dark-blue': '#0095c0',
+                'gray-blue': '#7faec5',
+                'text-bg': '#03426d',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-industrial-ebony text-industrial-cream font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-industrial-dark-gray border-b-2 border-industrial-mid-gray sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <h1 class="text-3xl font-bold text-industrial-dark-blue tracking-wider">GALBAN</h1>
+                </div>
+                <ul class="nav-links flex gap-8">
+                    <li><a href="index.html" class="text-industrial-cream hover:text-industrial-dark-blue transition-colors font-semibold">Início</a></li>
+                    <li><a href="clientes.html" class="text-industrial-cream hover:text-industrial-dark-blue transition-colors font-semibold">Clientes</a></li>
+                    <li><a href="atuacao.html" class="text-industrial-cream hover:text-industrial-dark-blue transition-colors font-semibold">Atuação</a></li>
+                    <li><a href="contato.html" class="text-industrial-cream hover:text-industrial-dark-blue transition-colors font-semibold">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-industrial-mid-gray py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-industrial-text-bg rounded-full blur-3xl"></div>
+        </div>
+        <div class="hero-content max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-5xl font-bold text-industrial-cream mb-4">Excelência em Caldeiraria Industrial</h2>
+            <p class="text-xl text-industrial-accent-gray mb-8">Estruturas metálicas, soldagem e montagem com qualidade, precisão e segurança</p>
+            <a href="atuacao.html" class="inline-block bg-industrial-dark-blue hover:bg-industrial-gray-blue text-industrial-ebony px-8 py-3 font-bold rounded transition-all">Nossos Serviços</a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a id="botao_wpp" href="https://wa.me/67998289600" target="_blank" aria-label="WhatsApp" class="fixed bottom-6 right-6 bg-industrial-dark-blue hover:bg-industrial-gray-blue text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition-transform hover:scale-110">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section class="section bg-industrial-dark-gray py-16 border-b-2 border-industrial-mid-gray">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-industrial-cream mb-6">Sobre a galban</h2>
+                <p class="text-industrial-accent-gray text-lg mb-4 leading-relaxed">Mediante toda essa estrutura, a galban atingiu com todas as expectativas os serviços prestados a diversas empresas, sendo algumas delas listadas abaixo.</p>
+                <p class="text-industrial-accent-gray text-lg leading-relaxed">A galban atua nas áreas de caldeiraria industrial, montagem e estruturas metálicas com mão de obra especializada para elaboração e execução de seu projeto com qualidade, otimização de tempo e segurança.</p>
+            </div>
+        </section>
+
+        <!-- Clients Preview -->
+        <section class="section bg-industrial-ebony py-16 border-b-2 border-industrial-mid-gray">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-industrial-cream mb-12">Nossos Clientes</h2>
+                <div class="clients-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="imagens/logos/Saint-Gobain_logo.jpg" alt="Saint-Gobain" class="max-w-full max-h-20">
+                    </div>
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="imagens/logos/cebrace.png" alt="Cebrace" class="max-w-full max-h-20">
+                    </div>
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="/placeholder.svg?height=80&width=120" alt="Cliente" class="max-w-full max-h-20">
+                    </div>
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="imagens/logos/GGB.png" alt="Gerdau" class="max-w-full max-h-20">
+                    </div>
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="imagens/logos/petrobras.png" alt="Petrobras" class="max-w-full max-h-20">
+                    </div>
+                    <div class="client-logo bg-industrial-mid-gray p-4 rounded flex items-center justify-center min-h-24">
+                        <img src="imagens/logos/monsanto.png" alt="Monsanto" class="max-w-full max-h-20">
+                    </div>
+                </div>
+                <div class="section-link text-center">
+                    <a href="clientes.html" class="text-industrial-dark-blue hover:text-industrial-gray-blue font-bold transition-colors">Ver todos os clientes →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="section bg-industrial-dark-gray py-16 border-b-2 border-industrial-mid-gray">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-4xl font-bold text-industrial-cream mb-12">Áreas de Atuação</h2>
+                <div class="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="service-card bg-industrial-text-bg p-6 rounded border-l-4 border-industrial-dark-blue hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-industrial-cream mb-3">Fabricação</h3>
+                        <p class="text-industrial-accent-gray">Estruturas leves, médias e pesadas em alumínio, inox e aço.</p>
+                    </div>
+                    <div class="service-card bg-industrial-text-bg p-6 rounded border-l-4 border-industrial-dark-blue hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-industrial-cream mb-3">Soldagem</h3>
+                        <p class="text-industrial-accent-gray">Soldadores qualificados, máquinas MIG, TIG automáticas.</p>
+                    </div>
+                    <div class="service-card bg-industrial-text-bg p-6 rounded border-l-4 border-industrial-dark-blue hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-industrial-cream mb-3">Corte</h3>
+                        <p class="text-industrial-accent-gray">Oxicorte, plasma automático, corte a frio e serra hidráulica.</p>
+                    </div>
+                    <div class="service-card bg-industrial-text-bg p-6 rounded border-l-4 border-industrial-dark-blue hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold text-industrial-cream mb-3">Montagem</h3>
+                        <p class="text-industrial-accent-gray">Profissionais qualificados para movimentação e montagem.</p>
+                    </div>
+                </div>
+                <div class="section-link text-center">
+                    <a href="atuacao.html" class="text-industrial-dark-blue hover:text-industrial-gray-blue font-bold transition-colors">Ver detalhes completos →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section bg-industrial-mid-gray py-16 border-b-2 border-industrial-dark-blue">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-industrial-cream mb-4">Pronto para seu próximo projeto?</h2>
+                <p class="text-lg text-industrial-accent-gray mb-8">Entre em contato conosco para uma consultoria sem compromisso</p>
+                <a href="contato.html" class="inline-block bg-industrial-cream hover:bg-industrial-off-white text-industrial-ebony px-8 py-3 font-bold rounded transition-all">Solicitar Orçamento</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-industrial-ebony border-t-2 border-industrial-mid-gray">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="footer-content grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="footer-section">
+                    <h4 class="text-xl font-bold text-industrial-cream mb-2">GALBAN</h4>
+                    <p class="text-industrial-accent-gray">Caldeiraria Industrial e Estruturas Metálicas</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="text-xl font-bold text-industrial-cream mb-3">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-industrial-accent-gray hover:text-industrial-dark-blue transition-colors">Início</a></li>
+                        <li><a href="clientes.html" class="text-industrial-accent-gray hover:text-industrial-dark-blue transition-colors">Clientes</a></li>
+                        <li><a href="atuacao.html" class="text-industrial-accent-gray hover:text-industrial-dark-blue transition-colors">Atuação</a></li>
+                        <li><a href="contato.html" class="text-industrial-accent-gray hover:text-industrial-dark-blue transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="text-xl font-bold text-industrial-cream mb-3">Contato</h4>
+                    <p class="text-industrial-accent-gray">Email: contato@galban.com.br</p>
+                    <p class="text-industrial-accent-gray">Tel: (67) 99828-9600</p>
+                </div>
+            </div>
+            <div class="footer-bottom border-t border-industrial-mid-gray pt-6 text-center">
+                <p class="text-industrial-accent-gray">&copy; 2025 galban. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

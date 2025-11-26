@@ -1,0 +1,17 @@
+cinza escuro
+#c2c2c4
+
+cinza claro
+#f5f5f3
+
+azul escuro
+#0095c0
+
+azul cinza
+#7faec5
+
+ebony - fundo do site
+#0b151e
+
+fundos de textos
+#03426d
