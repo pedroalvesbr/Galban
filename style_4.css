@@ -1,7 +1,7 @@
 /* ===== VARIABLES & TYPOGRAPHY ===== */
 :root {
   /* Colors - Blue-Gray Dark Theme */
-  --color-dark: black;
+  --color-dark: #0b151e;
   --color-gray-800: #1a2332;
   --color-gray-700: #253447;
   --color-gray-600: #2f4563;
@@ -10,7 +10,7 @@
   --color-white: #f5f5f3;
 
   /* Brand Colors */
-  --color-blue: #0a5d7d;
+  --color-blue: #0095c0;
   --color-blue-light: #7faec5;
   --color-text-bg: #03426d;
 
@@ -120,29 +120,10 @@ img {
   padding: 0 var(--spacing-lg);
 }
 
-/* ===== Carrousel ===== */
-/* Altura Mínima para o Container do Carrossel */
-#ctaCarouselGrid .carousel-inner {
-  min-height: 350px; /* Defina a altura que você deseja */
-}
-
-/* Garante que o item do carrossel e a imagem preencham a área */
-#ctaCarouselGrid .carousel-item {
-  height: 350px; /* Use o mesmo valor de min-height do inner */
-}
-
-#ctaCarouselGrid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ESSENCIAL: Garante que a imagem preencha o espaço sem mudar a proporção e sem distorcer, cortando as bordas se necessário. */
-}
-
-
-
-
 /* ===== HEADER & NAVIGATION ===== */
 .header {
-  background-color: var(--color-dark);
+  /* navbar com cor ebony #0b151e */
+  background-color: #0b151e;
   border-bottom: 1px solid var(--color-gray-700);
   position: sticky;
   top: 0;
@@ -187,38 +168,24 @@ img {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  /*background: linear-gradient(135deg, rgba(11, 21, 30, 0.9), rgba(37, 52, 71, 0.8)),
-    url("/placeholder.svg?height=600&width=1200");*/
-
-}
-
-.hero-background {
-  background-image: url('imagens/background.JPG');
+  /* hero com background blur de caldeira industrial */
+  background: linear-gradient(135deg, rgba(11, 21, 30, 0.7), rgba(37, 52, 71, 0.7)),
+    url("/placeholder.svg?height=600&width=1200");
   background-size: cover;
   background-position: center;
-  /* Remove padding from the background, it should be on the content */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: blur(1px) brightness(0.4);
-  z-index: 1; /* This ensures it's behind the content */
-}
-
-.hero-content {
-  position: relative; /* Crucial for positioning above the absolute background */
-  z-index: 2; /* Higher z-index than the background */
-  max-width: 800px;
+  background-attachment: fixed;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   text-align: center;
   min-height: 600px;
   display: flex;
-  flex-direction: column; /* Use flex-direction for better content alignment */
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-3xl) var(--spacing-lg); /* Apply padding here for content spacing */
-  margin: 0 auto; /* Center the content horizontally if max-width is used */
-  color: white; /* Example: make text visible against the dark background */
+}
+
+.hero-content {
+  max-width: 800px;
 }
 
 .hero-content h2 {
@@ -287,7 +254,7 @@ img {
 }
 
 .section.cta-section {
-  background: linear-gradient(135deg, #343a40 0%, #495057 50%, #343a40 100%);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-light));
   text-align: center;
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
@@ -303,65 +270,21 @@ img {
 }
 
 /* ===== PAGE HEADER ===== */
-/* Definição do cabeçalho de página com estilo industrial */
 .page-header {
-  /* Fundo: Degradê de cinza escuro para simular aço polido */
-  background: linear-gradient(135deg, #343a40 0%, #495057 50%, #343a40 100%);
-  position: relative; 
-  padding: var(--spacing-3xl) var(--spacing-lg); /* Mantém seu padding original */
+  background: linear-gradient(135deg, var(--color-gray-800), var(--color-gray-700));
+  padding: var(--spacing-3xl) var(--spacing-lg);
   text-align: center;
-  color: var(--color-light-steel, #adb5bd); /* Cor padrão clara */
-  
-  /* Borda Inferior: Mais forte, com cor de ferrugem/cobre para acento industrial */
-  border-bottom: 2px solid #b05700; 
-  
-  /* Sombras: Adiciona profundidade, simulando uma chapa grossa */
-  box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.5), 
-              0 5px 15px rgba(0, 0, 0, 0.3);        
-  overflow: hidden; 
+  border-bottom: 1px solid var(--color-blue);
 }
 
-/* Opcional: Textura sutil de metal escovado/riscado */
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px,
-      transparent 10px
-    ); 
-  opacity: 0.2; 
-  z-index: 0;
-}
-
-
-/* Título Principal (H1) */
 .page-header h1 {
-  /* Cor e sombra para simular brilho/reflexo metálico */
-  font-size: 42px; /* Mantive o valor original */
-  color: #fff; 
-  text-shadow: 0 0 10px #007bff, /* Brilho leve azulado */
-               0 0 20px rgba(0, 123, 255, 0.3); 
+  font-size: 42px;
   margin-bottom: var(--spacing-md);
-  position: relative; 
-  z-index: 1;
 }
 
-/* Parágrafo */
 .page-header p {
-  /* Cor clara com sombra para leitura em fundo escuro */
   font-size: var(--font-size-lg);
-  color: var(--color-gray-200, #ced4da); /* Usei um cinza claro para contraste */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
-  position: relative;
-  z-index: 1;
+  color: var(--color-gray-200);
 }
 
 /* ===== CLIENTS GRID ===== */
@@ -374,11 +297,12 @@ img {
 }
 
 .client-logo {
+  /* cards com background #c2c2c4 mantendo bordas e hover */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-lg);
-  background-color: var(--color-gray-800);
+  background-color: #c2c2c4;
   border-radius: 8px;
   border: 1px solid var(--color-gray-700);
   transition: var(--transition);
@@ -402,12 +326,13 @@ img {
 }
 
 .client-logo-item {
+  /* cards com background #c2c2c4 mantendo bordas e hover */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-xl);
-  background-color: var(--color-gray-800);
+  background-color: #c2c2c4;
   border-radius: 8px;
   border: 1px solid var(--color-gray-700);
   transition: var(--transition);
@@ -450,8 +375,9 @@ img {
 }
 
 .service-card {
+  /* cards com background #c2c2c4 mantendo bordas e hover */
   padding: var(--spacing-2xl);
-  background-color: var(--color-gray-800);
+  background-color: #c2c2c4;
   border-left: 4px solid var(--color-blue);
   border-radius: 4px;
   transition: var(--transition);
@@ -480,8 +406,9 @@ img {
 }
 
 .service-item {
+  /* cards com background #c2c2c4 mantendo bordas e hover */
   padding: var(--spacing-2xl);
-  background-color: var(--color-gray-800);
+  background-color: #c2c2c4;
   border-radius: 8px;
   border: 1px solid var(--color-gray-700);
   transition: var(--transition);
@@ -504,45 +431,34 @@ img {
 }
 
 /*====WHATSAPP====*/
-
-/* <CHANGE> WhatsApp button styling with improved white icon visibility */
 #botao_wpp {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 60px;
   height: 60px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: #25d366;
   color: #ffffff !important;
   font-size: 28px;
   font-weight: bold;
-
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   z-index: 1000;
-
-  /* Garante que o branco seja exibido corretamente */
   fill: #ffffff;
   stroke: #ffffff;
 }
 
-
-/* Efeito hover moderno */
 #botao_wpp:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
 }
 
-/* Opcional: tooltip de texto ao lado (boa UX em desktop) */
 #botao_wpp::after {
   content: "Entre em contato";
   position: absolute;
@@ -564,12 +480,12 @@ img {
   transform: translateY(0);
 }
 
-/* Responsividade — esconde o texto em telas pequenas */
 @media (max-width: 768px) {
   #botao_wpp::after {
     display: none;
   }
 }
+
 /* ===== REASONS GRID ===== */
 .reasons-grid {
   display: grid;
@@ -579,8 +495,9 @@ img {
 }
 
 .reason-card {
+  /* cards com background #c2c2c4 mantendo bordas e hover */
   padding: var(--spacing-2xl);
-  background-color: var(--color-dark);
+  background-color: #c2c2c4;
   border-radius: 8px;
   border: 1px solid var(--color-gray-700);
   transition: var(--transition);
