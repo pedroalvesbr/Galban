@@ -13,16 +13,17 @@
 <body>
     <!-- Header/Navigation -->
   <header class="header">
-       <nav class="navbar navbar-expand-md navbar-dark">
+  <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
-      <a class="navbar-brand text-center mx-auto brand-title" href="#">
+      
+      <a class="navbar-brand" href="index.html">
+          <img id="logo_empresa" src="imagens/galban_logo.png" style="width: 100px; height: auto;" alt="Galban_logo">
       </a>
 
-      <img id="logo_empresa" src="imagens/galban_logo.png" style="width: 100px; height: auto; padding-right: 10px;" alt="Galban_logo">
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ms-auto mb-2 mb-md-0 nav-links">
           <li class="nav-item">
@@ -37,11 +38,12 @@
           <li class="nav-item">
             <a class="nav-link" href="contato.html">Contato</a>
           </li>
-        </ul>       
+        </ul>       
       </div>
     </div>
   </nav>
 </header>
+
     <!-- Hero Section -->
     <section class="hero">
          <div class="hero-background"></div>

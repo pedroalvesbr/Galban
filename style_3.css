@@ -851,10 +851,6 @@ img {
     --spacing-2xl: 32px;
   }
 
-  .navbar .container {
-    flex-direction: column;
-    gap: var(--spacing-lg);
-  }
 
   .nav-links {
     gap: var(--spacing-lg);
