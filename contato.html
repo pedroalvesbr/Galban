@@ -8,13 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style_3.css"> 
-    
+    <link rel="stylesheet" href="style_3.css">
     <style>
-      /* Garante que o iframe do mapa seja responsivo (proporção 4:3) */
       .map-responsive {
           overflow: hidden;
-          padding-bottom: 75%; 
+          padding-bottom: 75%;
           position: relative;
           height: 0;
       }
@@ -25,45 +23,162 @@
           width: 100%;
           position: absolute;
       }
-      /* Remove o display customizado do wrapper para o grid Bootstrap funcionar */
-      .contact-wrapper {
-          display: block; 
+      /* <CHANGE> Aplicar mesmo estilo texturizado do page-header aos info-items */
+      .info-item {
+          background: linear-gradient(135deg, #343a40 0%, #495057 50%, #343a40 100%);
+          border-left: 4px solid #0a5d7d;
+          border-radius: 8px;
+          padding: 1.5rem;
+          position: relative;
+          overflow: hidden;
+          box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+      }
+      /* <CHANGE> Adicionar textura de metal escovado */
+      .info-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: repeating-linear-gradient(
+              45deg,
+              rgba(255, 255, 255, 0.05),
+              rgba(255, 255, 255, 0.05) 1px,
+              transparent 1px,
+              transparent 10px
+          );
+          opacity: 0.2;
+          z-index: 0;
+          pointer-events: none;
+      }
+      .info-item > * {
+          position: relative;
+          z-index: 1;
+      }
+      .info-item:hover {
+          transform: translateY(-4px);
+          box-shadow: inset 0 -3px 10px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 149, 192, 0.3);
+      }
+      .info-item h4 {
+          color: #7faec5;
+          font-weight: 600;
+          margin-bottom: 0.75rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+      }
+      .info-item p, .info-item .lead {
+          color: #c2c2c4;
+          margin: 0;
+          line-height: 1.6;
+      }
+      .info-item a {
+          color: #f5f5f3;
+          text-decoration: none;
+          transition: color 0.3s ease;
+      }
+      .info-item a:hover {
+          color: #7faec5;
+      }
+      /* <CHANGE> Melhorar espaçamento e responsividade */
+      .contact-section {
+          padding: 3rem 1rem;
+          background-color: #1a2332;
+      }
+      .contact-container {
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      .info-column {
+          display: grid;
+          gap: 1.5rem;
+      }
+      /* <CHANGE> Botão WhatsApp melhorado */
+      #botao_wpp {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #25d366;
+          border-radius: 50%;
+          box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+          cursor: pointer;
+          text-decoration: none;
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+          z-index: 1000;
+          border: none;
+      }
+      #botao_wpp:hover {
+          transform: scale(1.1);
+          box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+      }
+      #botao_wpp i {
+          font-size: 28px;
+          color: white;
+      }
+      /* <CHANGE> Responsividade melhorada */
+      @media (max-width: 768px) {
+          .contact-section {
+              padding: 2rem 1rem;
+          }
+          .info-item {
+              padding: 1.25rem;
+          }
+          .map-responsive {
+              margin-top: 1rem;
+          }
+      }
+      @media (max-width: 576px) {
+          .info-item h4 {
+              font-size: 1rem;
+          }
+          .info-item .lead {
+              font-size: 0.95rem;
+          }
+          .info-item {
+              padding: 1rem;
+          }
       }
     </style>
 </head>
 <body>
-      <!-- Header/Navigation -->
-  <header class="header">
-       <nav class="navbar navbar-expand-md navbar-dark">
-    <div class="container">
-      <a class="navbar-brand text-center mx-auto brand-title" href="#">
-      </a>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img id="logo_empresa" src="imagens/galban_logo.png" style="width: 100px; height: auto;" alt="Galban_logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ms-auto nav-links">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="clientes.html">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="atuacao.html">Atuação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-      <img id="logo_empresa" src="imagens/galban_logo.png" style="width: 100px; height: auto; padding-right: 10px;" alt="Galban_logo">
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto mb-2 mb-md-0 nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="clientes.html">Clientes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="atuacao.html">Atuação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contato.html">Contato</a>
-          </li>
-        </ul>       
-      </div>
-    </div>
-  </nav>
-</header>
-
+    <!-- Page Header -->
     <section class="page-header py-5">
         <div class="container text-center">
             <h1>Entre em Contato</h1>
@@ -71,66 +186,79 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main>
-        <section class="section contact-section py-5">
-            <div class="container">
-                <div class="row g-4"> 
-                    
-                    <div class="col-md-6">
-                        
-                        <div class="info-item mb-4">
-                            <h4><i class="bi bi-telephone-fill me-2"></i> Telefone</h4>
-                            <p class="lead"><a href="tel:+67998289600" class="text-decoration-none text-dark">(67) 99828-9600</a></p>
-                        </div>
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="row g-4">
+                    <!-- Coluna Esquerda - Informações de Contato -->
+                    <div class="col-lg-6">
+                        <div class="info-column">
+                            <div class="info-item">
+                                <h4><i class="bi bi-telephone-fill"></i> Telefone</h4>
+                                <p class="lead mb-0">
+                                    <a href="tel:+67998289600">(67) 99828-9600</a>
+                                </p>
+                            </div>
 
-                        <div class="info-item mb-4">
-                            <h4><i class="bi bi-envelope-fill me-2"></i> Email</h4>
-                            <p class="lead"><a href="mailto:contato@Galban.com.br" class="text-decoration-none text-dark">contato@Galban.com.br</a></p>
-                        </div>
+                            <div class="info-item">
+                                <h4><i class="bi bi-envelope-fill"></i> Email</h4>
+                                <p class="lead mb-0">
+                                    <a href="mailto:contato@Galban.com.br">contato@Galban.com.br</a>
+                                </p>
+                            </div>
 
-                        <div class="info-item mb-4">
-                            <h4><i class="bi bi-clock-fill me-2"></i> Horário de Funcionamento</h4>
-                            <p class="lead">Segunda a Sexta: 8h - 18h<br>Sábado: 8h - 13h</p>
-                        </div>
+                            <div class="info-item">
+                                <h4><i class="bi bi-clock-fill"></i> Horário de Funcionamento</h4>
+                                <p class="mb-0">Segunda a Sexta: <strong>8h - 18h</strong></p>
+                                <p class="mb-0">Sábado: <strong>8h - 13h</strong></p>
+                            </div>
 
-                        <div class="info-item mb-4">
-                            <h4><i class="bi bi-share-fill me-2"></i> Redes Sociais</h4>
-                            <div class="social-links d-flex gap-2">
-                                <a href="#" class="btn btn-outline-dark social-link"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" class="btn btn-outline-dark social-link"><i class="bi bi-facebook"></i></a>
-                                <a href="https://www.instagram.com/galban.solucoes/" class="btn btn-outline-dark social-link"><i class="bi bi-instagram"></i></a>
+                            <div class="info-item">
+                                <h4><i class="bi bi-share-fill"></i> Redes Sociais</h4>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <a href="#" class="btn btn-sm btn-outline-light" title="LinkedIn">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-outline-light" title="Facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/galban.solucoes/" target="_blank" class="btn btn-sm btn-outline-light" title="Instagram">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                    </div> 
-
-                    <div class="col-md-6">
-                        <div class="info-item mb-4">
-                            <h4><i class="bi bi-geo-alt-fill me-2"></i> Endereço</h4>
-                            <h5 class="fw-normal lead">Av. Vilma Martins e Souza, 446 - Bataguassu/MS</h5>
+                    <!-- Coluna Direita - Endereço e Mapa -->
+                    <div class="col-lg-6">
+                        <div class="info-item h-100">
+                            <h4><i class="bi bi-geo-alt-fill"></i> Localização</h4>
+                            <h5 class="fw-normal mb-3">Av. Vilma Martins e Souza, 446 - Bataguassu/MS</h5>
                             
-                            <div class="map-responsive mt-3 rounded shadow">
-                                <iframe 
-                                    src="https://maps.google.com/maps?q=Av.%20Vilma%20Martins%20e%20Souza,%20446%20-%20Bataguassu/MS&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
+                            <div class="map-responsive rounded overflow-hidden">
+                                <iframe
+                                    src="https://maps.google.com/maps?q=Av.%20Vilma%20Martins%20e%20Souza,%20446%20-%20Bataguassu/MS&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
-                            <p class="text-muted small mt-2">*Link do mapa corrigido para funcionalidade.</p>
                         </div>
-                    </div> 
-
-                </div> 
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    
-    <a id="botao_wpp" href="https://wa.me/67998289600" target="_blank" aria-label="WhatsApp" class="position-fixed bottom-0 end-0 p-3 fs-3" style="z-index: 1000;">
-        <i class="bi bi-whatsapp text-success bg-white rounded-circle p-2 shadow"></i>
+
+    <!-- WhatsApp Button -->
+    <a id="botao_wpp" href="https://wa.me/67998289600" target="_blank" aria-label="Abrir WhatsApp">
+        <i class="bi bi-whatsapp"></i>
     </a>
 
+    <!-- Footer -->
     <footer class="footer bg-dark text-white pt-4 pb-2">
         <div class="container">
             <div class="row footer-content">
@@ -158,7 +286,5 @@
             <p class="m-0 text-white-50">© 2025 Galban. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
